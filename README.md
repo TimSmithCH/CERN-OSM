@@ -14,7 +14,11 @@ This repository contains the code to generate these mappings, together with the 
 
 ## Practice
 - Run the Overpass API to identify CERN buildings:
-- http://overpass-api.de/api/interpreter?data=[out:json];way[%22building%22=%22yes%22](46.2292395,%206.0338419,46.2385931,6.0570547);out%20meta;
+  - Using a rough bounding box (for Mayrin site):
+    - http://overpass-api.de/api/interpreter?data=[out:json];way[%22building%22=%22yes%22](46.2292395,%206.0338419,46.2385931,6.0570547);out%20meta;
+  - Using an area query (for pit 8):
+    - http://overpass-api.de/api/interpreter?data=[out:json];way(area:2426099050);out%20meta;
+    - N.b: an overpass area id is the osm id plus 2400000000 (for a way)
 - Output to a file called "buildings_in_CERN_bb.json"
 - Run build_osm_mappings.py on it to strip out just the building number-osm id pairs
 - Output to a file called "cern_osm_mappings.json"
