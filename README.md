@@ -12,7 +12,7 @@ This repository contains the code to generate these mappings, together with the 
 - The OSM metadata is stored in a DB which can be queried using the [Overpass API](http://overpass-api.de/api/interpreter)
 - Using the overpass API it is possible to identify all ways within the CERN perimeter
 
-## Prctice
+## Practice
 - Run the Overpass API to identify CERN buildings:
 - http://overpass-api.de/api/interpreter?data=[out:json];way[%22building%22=%22yes%22](46.2292395,%206.0338419,46.2385931,6.0570547);out%20meta;
 - Output to a file called "buildings_in_CERN_bb.json"
@@ -21,4 +21,4 @@ This repository contains the code to generate these mappings, together with the 
 
 ## Notes
 - Can also chain such a call to visualise maps:
-- http://overpass-api.de/api/interpreter?data=[out:custom];way[%22building%22=%22yes%22][%22name%22=%22281%22](46.2292395,%206.0338419,46.2385931,6.0570547);out;&url=http://www.openstreetmap.org/?{{{type}}}={{{id}}}
+  - http://overpass-api.de/api/interpreter?data=[out:custom];way[%22building%22=%22yes%22][%22name%22=%22281%22](46.2292395,%206.0338419,46.2385931,6.0570547);out;&url=http://www.openstreetmap.org/?{{{type}}}={{{id}}}
