@@ -20,4 +20,4 @@ for building in data['elements']:
       building_array.append({"osm_id": building['id'], "building": max(int_list)})
 
 with open('cern_osm_mappings.json', 'w') as outfile:
-    json.dump({'data': sorted(building_array, key=lambda k: k['building'])}, outfile)
+    json.dump({'data': sorted(building_array, key=lambda k: k['building'])}, outfile, indent=4)
