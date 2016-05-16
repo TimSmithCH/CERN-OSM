@@ -10,13 +10,16 @@ This repository contains the code to generate these mappings, together with the 
 - The outer perimeter of each CERN site is also stored as an OSM "way"
   - Examples: [Meyrin Site](http://www.openstreetmap.org/way/174126176),
     [Prevessin site](http://www.openstreetmap.org/way/23722021),
-    [Pit 8 (LHCb)](http://www.openstreetmap.org/way/26099050)
+    [P1 ATLAS](http://www.openstreetmap.org/way/340213340),
+    [P2 ALICE](http://www.openstreetmap.org/way/253791392),
+    [P5 CMS](http://www.openstreetmap.org/way/26966729),
+    [P8 LHCb](http://www.openstreetmap.org/way/26099050)
 - The OSM metadata is stored in a DB which can be queried using the [Overpass API](http://overpass-api.de/api/interpreter)
 - Using the overpass API it is possible to identify all ways within the CERN perimeter
 
 ## Practice
 - Run the Overpass API to identify CERN buildings:
-  - Using a rough bounding box (for Mayrin site):
+  - Using a rough bounding box (for Meyrin site):
     - http://overpass-api.de/api/interpreter?data=[out:json];way[%22building%22=%22yes%22](46.2292395,%206.0338419,46.2385931,6.0570547);out%20meta;
   - Using an area query (for pit 8):
     - http://overpass-api.de/api/interpreter?data=[out:json];way(area:2426099050);out%20meta;
