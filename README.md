@@ -8,7 +8,8 @@ This repository contains the code to generate these mappings, together with the 
 - Buildings are stored as OSM "ways" which trace their outer perimeters
   - Example: [B28](http://www.openstreetmap.org/way/23696046)
 - The outer perimeter of each CERN site is also stored as an OSM "way"
-  - Example: [Meyrin Site](http://www.openstreetmap.org/way/174126176)
+  - Examples: [Meyrin Site](http://www.openstreetmap.org/way/174126176),
+    [Pit 8, LHCb](http://www.openstreetmap.org/way/26099050)
 - The OSM metadata is stored in a DB which can be queried using the [Overpass API](http://overpass-api.de/api/interpreter)
 - Using the overpass API it is possible to identify all ways within the CERN perimeter
 
