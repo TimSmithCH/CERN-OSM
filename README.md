@@ -16,6 +16,7 @@ This repository contains the code to generate these mappings, together with the 
     [P8 LHCb](http://www.openstreetmap.org/way/26099050)
 - The OSM metadata is stored in a DB which can be queried using the [Overpass API](http://overpass-api.de/api/interpreter)
 - Using the overpass API it is possible to identify all buildings within the CERN perimeter
+- And OSM maps can be rendered and visualised using [MapBox](https://www.mapbox.com/mapbox-gl-js/api/)
 
 ## Practice
 - Run the Overpass API to identify CERN buildings:
