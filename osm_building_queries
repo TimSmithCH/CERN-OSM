@@ -1,0 +1,28 @@
+#!/bin/bash
+#
+# CERN Meyrin site
+curl -o buildings_in_CERN_Meyrin -g "http://overpass-api.de/api/interpreter?data=[out:json][timeout:25];area(3600027005)-%3E.searchArea;(way[%22building%22=%22yes%22](area.searchArea););out%20meta;"
+#
+# CERN Prevessin site
+curl -o buildings_in_CERN_Prevessin -g "http://overpass-api.de/api/interpreter?data=[out:json][timeout:25];area(3605425747)-%3E.searchArea;(way[%22building%22=%22yes%22](area.searchArea););out%20meta;"
+#
+# Pit 1 (ATLAS)
+curl -o buildings_in_p1 -g "http://overpass-api.de/api/interpreter?data=[out:json][timeout:25];area(2740213340)-%3E.searchArea;(way[%22building%22=%22yes%22](area.searchArea););out%20meta;"
+#
+# Pit 2 (ALICE)
+curl -o buildings_in_p2 -g "http://overpass-api.de/api/interpreter?data=[out:json][timeout:25];area(2653791392)-%3E.searchArea;(way[%22building%22=%22yes%22](area.searchArea););out%20meta;"
+#
+# Pit 5 (CMS)
+curl -o buildings_in_p5 -g "http://overpass-api.de/api/interpreter?data=[out:json][timeout:25];area(2426966729)-%3E.searchArea;(way[%22building%22=%22yes%22](area.searchArea););out%20meta;"
+#
+# Pit 8 (LHCb)
+curl -o buildings_in_p8 -g "http://overpass-api.de/api/interpreter?data=[out:json][timeout:25];area(2426099050)-%3E.searchArea;(way[%22building%22=%22yes%22](area.searchArea););out%20meta;"
+#
+# Pits 3,4,6,7
+curl -o buildings_in_p3467 -g "http://overpass-api.de/api/interpreter?data=[out:json][timeout:25];(area(2435282541);area(2575086188);area(2426966721);area(2426967026);area(2495421227))-%3E.searchArea;(way[%22building%22=%22yes%22](area.searchArea););out%20meta;"
+#
+# SM18
+curl -o buildings_in_sm18 -g "http://overpass-api.de/api/interpreter?data=[out:json][timeout:25];area(2740347345)-%3E.searchArea;(way[%22building%22=%22yes%22](area.searchArea););out%20meta;"
+#
+# SPS BA1,2,4,5
+curl -o buildings_in_SPS -g "http://overpass-api.de/api/interpreter?data=[out:json][timeout:25];(area(2574883470);area(2574883471);area(2426098988);area(2478502928))-%3E.searchArea;(way[%22building%22=%22yes%22](area.searchArea););out%20meta;"
